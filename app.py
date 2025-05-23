@@ -35,7 +35,20 @@ def get_title(title):
             return jsonify(t.to_dict())
     return jsonify({"message": "Não foi possível encontrar esta tarefa!"}), 404
 
-
+@app.route('/tasks/<title>', methods=['PUT'])
+def update_task(title):
+    task = None
+    for t in tasks:
+        if t.title == title:
+            task = t
+            break
+    if task is None:
+        return jsonify({"error": "Tarefa não encontrada!"}), 404
+    data = request.get_json()
+    task.title = data.get('title', task.title)
+    task.description = data.get('description', task.description)
+    task.completed = data.get('completed', task.completed)
+    return jsonify({"message": "Tarefa atualizada com sucesso!"}), 200
 
 if __name__ == "__main__":
   app.run(debug=True)
