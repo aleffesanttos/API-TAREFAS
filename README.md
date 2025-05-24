@@ -24,3 +24,4 @@ Aplicação de princípios de código limpo em Python;
 Separação de responsabilidades no backend;
 Validação de dados e tratamento de erros de forma eficaz.
 
+Teste realizados com Postman!
