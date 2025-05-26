@@ -18,7 +18,7 @@ def create_task():
     new_task = Task(id=task_id, title=title, description=description, completed=False)
     task_id += 1
     tasks.append(new_task)
-    return jsonify({'message': 'Nova tarefa criada com sucesso!'})
+    return jsonify({'message': 'Nova tarefa criada com sucesso!', "id": new_task.id})
 
 # Rota para buscar todas as tarefas
 @app.route('/tasks', methods=['GET'])
@@ -31,22 +31,22 @@ def search_tasks():
     return jsonify(output)
 
 # Rota para buscar tarefa por título
-@app.route('/tasks/<title>', methods=['GET'])
-def get_title(title):
+@app.route('/tasks/<int:id>', methods=['GET'])
+def get_title(id):
     for t in tasks:
-        if t.title == title:
+        if t.id == id:
             return jsonify(t.to_dict())
     return jsonify({"message": "Não foi possível encontrar esta tarefa!"}), 404
 
 # Rota para atualizar tarefa
-@app.route('/tasks/<title>', methods=['PUT'])
-def update_task(title):
-    task = next((t for t in tasks if t.title == title), None)
+@app.route('/tasks/<int:id>', methods=['PUT'])
+def update_task(id):
+    task = next((t for t in tasks if t.id == id), None)
     if task is None:
         return jsonify({"error": "Tarefa não encontrada!"}), 404
     
     data = request.get_json()
-    task.title = data.get('title', task.title)
+    task.title = data.get('id', task.id)
     task.description = data.get('description', task.description)
     task.completed = data.get('completed', task.completed)
     return jsonify({"message": "Tarefa atualizada com sucesso!"}), 200
