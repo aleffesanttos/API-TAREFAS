@@ -7,6 +7,7 @@ Uma API RESTful desenvolvida com Flask para gerenciamento de tarefas. Este proje
 3- Tratamento de erros
 4- Organização de código e arquitetura limpa.
 
+
 🚀 Sobre o Projeto:
 
 Este repositório foi criado para apresentar minhas habilidades como desenvolvedor backend Python. A API simula um sistema de gestão de tarefas simples e direto, com foco em:
@@ -15,12 +16,14 @@ Escrita de código limpo e legível;
 Aplicação de boas práticas;
 Modularização e separação de responsabilidades.
 
+
 ⚙️ Funcionalidades:
 
 ✅ Criar tarefas com título e descrição;
 🔍 Listar todas as tarefas ou buscar por tarefa especifica;
 📝 Atualizar informações de uma tarefa existente;
 ❌ Remover tarefas por ID.
+
 
 🧠 Tecnologias e Ferramentas:
 
@@ -30,10 +33,12 @@ JSON — Formato para requisições e respostas
 Pytest — Módulo de testes automatizados
 Postman — Testes manuais e documentação de endpoints
 
+
 🧪 Testes
 ✅ Módulo de testes completo implementado com Pytest;
 Casos cobrindo todas as rotas principais;
 Validação de erros e fluxos alternativos testados.
+
 
 📌 Observação: Este projeto é voltado para fins educacionais e demonstração técnica. 
 
