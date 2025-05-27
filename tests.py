@@ -33,3 +33,30 @@ def test_get_task():
     assert response.status_code == 200
     response_json = response.json()
     assert task_id == response_json['id']
+
+#Teste para atualizar tarefa.
+def test_update_task():
+  if tasks:
+    task_id = tasks[0]
+    payload = { 
+            "completed": True,
+            "title" : "Tarefa atualizada com pytest",
+            "description" : "Teste OK" 
+    }
+            
+    response = requests.put(f'{BASE_URL}/tasks/{task_id}', json=payload)
+    response.status_code == 200
+    response_json = response.json()
+    assert 'message' in response_json
+
+#Teste para deletar tarefa.
+def test_delete_task():
+  if tasks:
+    task_id = tasks[0]
+    response = requests.delete(f'{BASE_URL}/tasks/{task_id}')
+    response.status_code == 200
+
+    response = requests.delete(f'{BASE_URL}/tasks/{task_id}')
+    response.status_code == 404
+   
+

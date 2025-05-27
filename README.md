@@ -1,27 +1,39 @@
-🗂️ Task Management API
+📋 Task Management API:
 
-Uma API RESTful desenvolvida com Flask para gerenciamento de tarefas. O projeto tem como objetivo demonstrar competências essenciais em desenvolvimento backend, como operações CRUD, validação de dados e tratamento de erros, com um código limpo e bem estruturado.
+Uma API RESTful desenvolvida com Flask para gerenciamento de tarefas. Este projeto tem como objetivo demonstrar competências essenciais no desenvolvimento backend, como:
 
-🚀 Por que este projeto?
-Este projeto foi criado para apresentar minhas habilidades como desenvolvedor backend utilizando Python. A API simula um sistema simples de gestão de tarefas, com foco em boas práticas, legibilidade do código e organização arquitetural.
+1- Operações CRUD
+2- Validação de dados
+3- Tratamento de erros
+4- Organização de código e arquitetura limpa.
 
-📌 Funcionalidades:
-✅ Criar novas tarefas com título e descrição;
+🚀 Sobre o Projeto:
+
+Este repositório foi criado para apresentar minhas habilidades como desenvolvedor backend Python. A API simula um sistema de gestão de tarefas simples e direto, com foco em:
+
+Escrita de código limpo e legível;
+Aplicação de boas práticas;
+Modularização e separação de responsabilidades.
+
+⚙️ Funcionalidades:
+
+✅ Criar tarefas com título e descrição;
 🔍 Listar todas as tarefas ou buscar por tarefa especifica;
-✏️ Atualizar informações de uma tarefa existente;
+📝 Atualizar informações de uma tarefa existente;
 ❌ Remover tarefas por ID.
 
-📎 Armazenamento de dados em memória (sem banco de dados externo)
+🧠 Tecnologias e Ferramentas:
 
-🧰 Tecnologias utilizadas:
-Python 3.12 — Linguagem principal do projeto;
-Flask — Framework web leve para criação da API;
-JSON — Formato usado nas requisições e respostas da API.
+Python 3.12 — Linguagem principal
+Flask — Framework web leve para construção da API
+JSON — Formato para requisições e respostas
+Pytest — Módulo de testes automatizados
+Postman — Testes manuais e documentação de endpoints
 
-🎯 O que você encontra neste repositório?
-Como criar e documentar uma API RESTful com Flask;
-Aplicação de princípios de código limpo em Python;
-Separação de responsabilidades no backend;
-Validação de dados e tratamento de erros de forma eficaz.
+🧪 Testes
+✅ Módulo de testes completo implementado com Pytest;
+Casos cobrindo todas as rotas principais;
+Validação de erros e fluxos alternativos testados.
 
-Teste realizados com Postman!
+📌 Observação: Este projeto é voltado para fins educacionais e demonstração técnica. 
+

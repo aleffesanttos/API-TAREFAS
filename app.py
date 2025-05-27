@@ -30,7 +30,7 @@ def search_tasks():
     }
     return jsonify(output)
 
-# Rota para buscar tarefa por título
+# Rota para buscar tarefa por ID
 @app.route('/tasks/<int:id>', methods=['GET'])
 def get_title(id):
     for t in tasks:
@@ -46,7 +46,7 @@ def update_task(id):
         return jsonify({"error": "Tarefa não encontrada!"}), 404
     
     data = request.get_json()
-    task.title = data.get('id', task.id)
+    task.title = data.get('title', task.title)
     task.description = data.get('description', task.description)
     task.completed = data.get('completed', task.completed)
     return jsonify({"message": "Tarefa atualizada com sucesso!"}), 200
