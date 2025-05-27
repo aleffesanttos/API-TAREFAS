@@ -7,7 +7,7 @@ Este projeto foi criado para apresentar minhas habilidades como desenvolvedor ba
 
 📌 Funcionalidades:
 ✅ Criar novas tarefas com título e descrição;
-🔍 Listar todas as tarefas ou buscar por título;
+🔍 Listar todas as tarefas ou buscar por tarefa especifica;
 ✏️ Atualizar informações de uma tarefa existente;
 ❌ Remover tarefas por ID.
 
